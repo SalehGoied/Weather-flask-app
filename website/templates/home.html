@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+    <div align=center>
+        <div align=center style="width: 50%;">
+            <form method="POST" class="gy-2 gx-3 align-items-center">
+                <div class="col-auto">
+                  <label class="visually" for="autoSizingInput" style="color: black;">Name of City</label>
+                  <input name="city" type="text" class="form-control" id="autoSizingInput" placeholder="Name of City">
+                </div>
+                <br>
+                <div class="col-auto">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+              </form>
+    
+            <br><br><br>
+            <div class="card" style="width: 18rem;background-color: bisque; ">
+                <h5 class="card-title">{{ weather.city }}</h5>
+                <div className="weather-icon">
+                    <img style='width:70px' alt="Icon of City" src= {{weather.icon}} />
+               </div>
+                <div class="card-body">
+                    
+                  
+                  <p class="btn-primary">{{ weather.description }}</p>
+                  <p  class="btn-primary">{{ weather.tempC }} <br> {{ weather.tempF }}</p>
+                </div>
+              </div>
+        </div>
+    
+    
+    </div>
+
+{% endblock %}
